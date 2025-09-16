@@ -68,14 +68,16 @@ fun NotifBadge(modifier: Modifier = Modifier) {
     Box(modifier = modifier) {
         AsyncImage(
             model = "https://lookaside.fbsbx.com/elementpath/media/?media_id=1515764255735341&version=1723113684",
-            contentDescription = "Icône instagram"
+            contentDescription = "Icône instagram",
+            modifier = Modifier.size(80.dp) // Taille définie pour l'image
+
         )
         Box(
-            modifier = Modifier.padding(start = 8.dp, top = 8.dp)
+            modifier = Modifier
                 .clip(CircleShape)
                 .size(28.dp)
                 .background(Color.Red)
-                .align(Alignment.BottomEnd),
+                .align(Alignment.TopEnd),
                 contentAlignment = Alignment.Center
         ){
             Text("1", color = Color.White)

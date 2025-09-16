@@ -59,7 +59,7 @@ fun ColonneIntro(modifier: Modifier) {
         Button(onClick = {}) {
             Text("Appuyer ici ne fais rien")
         }
-        NotifBadge()
+        NotifBadge(Modifier.size(75.dp))
     }
 }
 
@@ -71,11 +71,14 @@ fun NotifBadge(modifier: Modifier = Modifier) {
             contentDescription = "Icône instagram"
         )
         Box(
-            modifier = Modifier
+            modifier = Modifier.padding(start = 8.dp, top = 8.dp)
                 .clip(CircleShape)
                 .size(28.dp)
                 .background(Color.Red)
-                .align(Alignment.BottomEnd)
-        )
+                .align(Alignment.BottomEnd),
+                contentAlignment = Alignment.Center
+        ){
+            Text("1", color = Color.White)
+        }
     }
 }
